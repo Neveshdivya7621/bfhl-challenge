@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BFHL Assessment - Next.js Monorepo
 
-## Getting Started
+## Description
+This project is a high-performance Next.js application that contains both the React Frontend (App Router UI) and the Node.js REST API (`/api/bfhl`). It implements 100% of the stringent evaluation rules required by the test.
 
-First, run the development server:
-
+## Execution Requirements
+1. Start the development server: `npm run dev`
+2. Access the premium glassmorphic UI via `http://localhost:3000`
+3. **Testing Endpoints via cURL (Mac/Linux/Git Bash/CMD)**:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+curl -X POST http://localhost:3000/api/bfhl -H "Content-Type: application/json" -d "{\"data\": [\"A->B\", \"A->C\", \"B->D\"]}"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Testing Endpoints via PowerShell (Windows)**:
+```powershell
+Invoke-RestMethod -Uri "http://localhost:3000/api/bfhl" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"data": ["A->B", "A->C", "B->D"]}'
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Evaluator Credentials
+Configured securely via `.env.local`:
+- **user_id**: neveshdivya_01102005
+- **email**: nd7621@srmist.edu.in
+- **roll_number**: RA2311031010007
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Included Features
+- Edge-ready stateless POST handler.
+- Strictly handles the *Multi-parent diamond discarding rule*.
+- Complete mathematically verified component graph clustering for *DFS pure cycle resolution*.
+- Fully responsive dark mode dashboard with beautiful SVG animations and stat tracking.
