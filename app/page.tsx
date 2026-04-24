@@ -63,12 +63,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white selection:bg-indigo-500/30 selection:text-indigo-200 font-sans tracking-tight pb-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-neutral-950 to-neutral-950 pointer-events-none" />
+    <div className="min-h-screen bg-neutral-950 text-white selection:bg-blue-600/30 selection:text-blue-200 font-sans tracking-tight pb-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/30 via-neutral-950 to-neutral-950 pointer-events-none" />
       
       <main className="relative max-w-4xl mx-auto pt-24 px-6">
         <header className="mb-12 cursor-default">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-indigo-300 font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-blue-300 font-medium mb-4">
             <Zap className="w-3 h-3" /> API Route Active
           </div>
           <div className="inline-block relative">
@@ -134,7 +134,7 @@ export default function App() {
               </div>
 
               {/* JSON Info Block */}
-              <div className="p-5 rounded-2xl flex flex-col gap-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-200">
+              <div className="p-5 rounded-2xl flex flex-col gap-2 bg-blue-600/10 border border-blue-600/20 text-blue-200">
                   <div className="flex flex-col md:flex-row gap-4 items-center font-mono text-xs w-full justify-between tracking-wide">
                      <p><b>user_id:</b> {result.user_id}</p>
                      <p><b>email_id:</b> {result.email_id}</p>
@@ -144,7 +144,7 @@ export default function App() {
 
               <div className="rounded-2xl border border-white/10 overflow-hidden bg-[#0A0A0A]">
                  <div className="px-6 py-4 border-b border-white/10 bg-white/5 flex gap-2 items-center">
-                    <Waypoints className="w-5 h-5 text-indigo-400" />
+                    <Waypoints className="w-5 h-5 text-sky-400" />
                     <h2 className="font-semibold text-white/90">Component Hierarchies</h2>
                  </div>
                  
@@ -166,7 +166,7 @@ export default function App() {
                          {!h.has_cycle && h.tree[h.root] ? (
                             <div className="font-mono text-sm">
                               <div className="flex items-center gap-2">
-                                <div className="h-7 w-7 rounded bg-indigo-500 text-white flex items-center justify-center font-bold shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                                <div className="h-7 w-7 rounded bg-blue-600 text-white flex items-center justify-center font-bold shadow-[0_0_15px_rgba(37,99,235,0.5)]">
                                   {h.root}
                                 </div>
                               </div>
@@ -196,10 +196,10 @@ export default function App() {
 
 const StatCard = ({ title, value, highlight, isWarning }: any) => (
   <div className={`p-6 rounded-2xl border bg-white/5 backdrop-blur-sm ${
-    highlight ? "border-indigo-500/50 shadow-[0_0_30px_rgba(99,102,241,0.15)]" : 
+    highlight ? "border-blue-500/50 shadow-[0_0_30px_rgba(37,99,235,0.15)]" : 
     isWarning ? "border-red-500/30" : "border-white/10"
   }`}>
     <h3 className="text-white/50 text-sm font-medium mb-1">{title}</h3>
-    <p className={`text-4xl tracking-tighter font-bold ${highlight ? "text-indigo-400" : isWarning ? "text-red-400" : "text-white"}`}>{value}</p>
+    <p className={`text-4xl tracking-tighter font-bold ${highlight ? "text-sky-400" : isWarning ? "text-red-400" : "text-white"}`}>{value}</p>
   </div>
 );
