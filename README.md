@@ -35,16 +35,3 @@ Built to strictly satisfy all **BFHL evaluation requirements** with **optimized 
 - ✅ Glassmorphism + Dark Mode 🌙
 - ✅ Animated dashboard (SVG stats)
 
----
-
-## 🖼️ UI Preview
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Dashboard+Preview" />
-</p>
-
-> 💡 Replace this image with your actual UI screenshot later
-
----
-
-## 📂 Project Structure
